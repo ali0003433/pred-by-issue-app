@@ -2,14 +2,23 @@ import os
 import sys
 import json
 import pickle
+import pandas as pd
+import numpy as np
+from sklearn.externals import joblib
+from imblearn.over_sampling import SMOTE 
+import random
+from sklearn.linear_model import LogisticRegression
+
+
 
 # combine seven issue predictors into dataframe 
 
 # one hot encode predictors dataframe
 
 def make_prediction(text=str):
+    
     # import model
-    clf = joblib.load('./filename.pkl')
+    clf = joblib.load('./clf.pkl')
     
     # convert form into dataframe
     new_form = pd.Dataframe({'content': [text],
