@@ -5,7 +5,6 @@ import pickle
 import pandas as pd
 import numpy as np
 from sklearn.externals import joblib
-from imblearn.over_sampling import SMOTE 
 import random
 from sklearn.linear_model import LogisticRegression
 
