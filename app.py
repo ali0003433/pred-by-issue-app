@@ -1,7 +1,5 @@
 import flask
-from flask import request
-from predictor_api import make_prediction
-from flask import jsonify
+from flask import request, jsonify
 
 # initialize app 
 app = flask.Flask(__name__)
@@ -11,28 +9,32 @@ def print_piped():
     if request.form['mes']:
         msg = request.form['mes']
         print(msg)
-        x_input, predictions = make_prediction(str(msg))
+        x_input, pred_class, pred_proba = make_prediction(str(msg))
         flask.render_template('index.html',
-                                chat_in=x_input,
-                                prediction=predictions)
-    return jsonify(predictions)
+                               chat_in=x_input,
+                               prediction_class=pred_class,
+                               prediction_prob=pred_proba)
+    return jsonify(pred_class)
 
 @app.route('/', methods=['GET'])
 def predict():
+    # request.args contains arguments from the form
     print(request.args)
     if (request.args):
-        x_input, predictions = make_prediction(request.args['chat_in'])
+        x_input, pred_class, pred_proba = make_prediction(request.args['chat_in'])
         print(x_input)
         return flask.render_template('index.html',
                                      chat_in=x_input,
-                                     prediction=predictions)
+                                     prediction_class=pred_class, 
+                                     prediction_prob=pred_proba)
     else:
-        x_input, predictions = make_prediction('')
+        # first load, request.args will be empty immutabledict type, don't throw error
         return flask.render_template('index.html', 
-                                     chat_in=x_input, 
-                                     prediction=predictions)
+                                     chat_in='', 
+                                     prediction_class='',
+                                     prediction_proba='')
 
 # start the server, listen for requests 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)  # local dev 
     app.run()
