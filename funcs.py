@@ -8,8 +8,6 @@ from sklearn.externals import joblib
 import random
 from sklearn.linear_model import LogisticRegression
 
-
-
 # combine seven issue predictors into dataframe 
 
 # one hot encode predictors dataframe
