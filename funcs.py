@@ -9,7 +9,7 @@ import random
 from sklearn.linear_model import LogisticRegression
 
 def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigration, res_terrorism, res_gender):
-    data = {'imiss_c_2016': res_immigration,
+    data = {'imiss_c_2016_1': res_immigration,
             'imiss_f_2016': res_terrorism,
             'imiss_l_2016': res_climate,
             'imiss_p_2016': res_budget,
@@ -17,11 +17,12 @@ def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigrati
             'imiss_x_2016': res_racial, 
             'imiss_y_2016': res_gender
             }
-    df = pd.DataFrame.from_dict(data)
-    print(df)
+    df = pd.DataFrame(data, index=[0])
+    print('dataframe created')
+    print(df_clean)
+    print(len(df_clean.columns))
+
     # clf = joblib.load('./clf.pkl')
-    # pred = clf.predict(X_test)
+    # pred = clf.predict(X)
     # print(pred)
-    print('running prediction')
-    # return prediction
     return 'res.html'
