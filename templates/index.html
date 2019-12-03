@@ -2,16 +2,73 @@
 <html lang='en'>
     <head>
         <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Vote classifier</title>
         <link rel='stylesheet' type='text/css' href='static/css/main.css'>
     </head>
     <body>
-        <h1>Who did you vote for in 2016?</h1>
-        <h3>Answer issue prioritization questions to learn if your priorities line up with others who voted the same.</h3>
-        <input type='text' name='chat_in' max_length='500'>
+        <div id= 'form-container'>
+            <form class = 'form' id = 'issue-form'>
+                <h1 class = 'form-title'>How important are the following issues to you?</h1>
+                <h2 class = 'form-descr'>Submit the survey to return your likely 2016 Presidential choice.</h2>
+                <div class='q-container' id = 'q1'>
+                    <h3 class = 'issue'>The Size of Government</h3>
+                    <input type = 'radio' name = 'size' value= '1'>Very Important<br>
+                    <input type = 'radio' name = 'size' value= '2'>Somewhat Important<br>
+                    <input type = 'radio' name = 'size' value = '3'>Not Very Important<br>
+                    <input type = 'radio' name = 'size' value = '4'>Unimportant<br>
+                </div>
+                <div class='q-container' id = 'q2'>
+                        <h3 class = 'issue'>Racial Equality</h3>
+                        <input type = 'radio' name = 'racial' value= '1'>Very Important<br>
+                        <input type = 'radio' name = 'racial' value= '2'>Somewhat Important<br>
+                        <input type = 'radio' name = 'racial' value = '3'>Not Very Important<br>
+                        <input type = 'radio' name = 'racial' value = '4'>Unimportant<br>
+                </div>
+                <div class='q-container' id = 'q3'>
+                        <h3 class = 'issue'>Climate Change</h3>
+                        <input type = 'radio' name = 'climate' value= '1'>Very Important<br>
+                        <input type = 'radio' name = 'climate' value= '2'>Somewhat Important<br>
+                        <input type = 'radio' name = 'climate' value = '3'>Not Very Important<br>
+                        <input type = 'radio' name = 'climate' value = '4'>Unimportant<br>
+                </div>
+                <div class='q-container' id = 'q4'>
+                        <h3 class = 'issue'>The Budget Deficit</h3>
+                        <input type = 'radio' name = 'budget' value= '1'>Very Important<br>
+                        <input type = 'radio' name = 'budget' value= '2'>Somewhat Important<br>
+                        <input type = 'radio' name = 'budget' value = '3'>Not Very Important<br>
+                        <input type = 'radio' name = 'budget' value = '4'>Unimportant<br>
+                </div>
+                <div class='q-container' id = 'q5'>
+                        <h3 class = 'issue'>Immigration</h3>
+                        <input type = 'radio' name = 'immigration' value= '1'>Very Important<br>
+                        <input type = 'radio' name = 'immigration' value= '2'>Somewhat Important<br>
+                        <input type = 'radio' name = 'immigration' value = '3'>Not Very Important<br>
+                        <input type = 'radio' name = 'immigration' value = '4'>Unimportant<br>
+                </div>
+                <div class='q-container' id = 'q6'>
+                        <h3 class = 'issue'>Terrorism</h3>
+                        <input type = 'radio' name = 'terrorism' value= '1'>Very Important<br>
+                        <input type = 'radio' name = 'terrorism' value= '2'>Somewhat Important<br>
+                        <input type = 'radio' name = 'terrorism' value = '3'>Not Very Important<br>
+                        <input type = 'radio' name = 'terrorism' value = '4'>Unimportant<br>
+                </div>
+                <div class='q-container' id = 'q7'>
+                        <h3 class = 'issue'>Gender Equality</h3>
+                        <input type = 'radio' name = 'gender' value= '1'>Very Important<br>
+                        <input type = 'radio' name = 'gender' value= '2'>Somewhat Important<br>
+                        <input type = 'radio' name = 'gender' value = '3'>Not Very Important<br>
+                        <input type = 'radio' name = 'gender' value = '4'>Unimportant<br>
+                </div>
+                <button type= 'submit'>Submit</button>
+            </form>
+        </div>
+        
+        <!-- <input type='text' name='chat_in' max_length='500'> -->
         <!--Submit button-->
-        <input type='submit' value='Submit' method='get'>
+        <!-- <input type='submit' value='Submit' method='get'> --> -->
 
-        <p>By Alyssa Liguori</p>
+        <footer>By Alyssa Liguori</footer>
     </body>
+    <script src='main.js'></script>
 </html>
