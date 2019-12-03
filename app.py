@@ -1,17 +1,16 @@
 import flask
 import cgi, cgitb
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 from funcs import make_prediction
 
 # initialize app 
 app = flask.Flask(__name__)
 
-@app.route('/', methods=['POST'])
-def test():
-    print('testing post request')
-    return 'testing'
-
 @app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
+
+@app.route('/', methods=['POST'])
 def predict():
     form = cgi.FieldStorage()
     # res_sz
@@ -51,7 +50,7 @@ def predict():
         res_gdr = '8'
     res_dict = {'res_sz': res_sz, 'res_rc': res_rc, 'res_clm': res_clm, 'res_bgt': res_bgt, 'res_imm': res_imm, 'res_trr': res_trr, 'res_gdr': res_gdr}
     print(res_dict)
-    return res_dict
+    return render_template('index.html')
 
 # start the server, listen for requests 
 if __name__ == '__main__':
