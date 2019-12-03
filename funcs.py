@@ -4,35 +4,21 @@ import json
 import pickle
 import pandas as pd
 import numpy as np
-from sklearn.externals import joblib
+import joblib
 import random
 from sklearn.linear_model import LogisticRegression
 
-# combine seven issue predictors into dataframe 
-
-# one hot encode predictors dataframe
-
-def make_prediction(text=str):
-    
+def make_prediction(res_dict):
     # import model
     clf = joblib.load('./clf.pkl')
-    
+    return clf
     # convert form into dataframe
-    new_form = pd.DataFrame({'content': [text],
-                         'target': None,
-                         'author': None,
-                         'publish-date': None})
-
     # clean form dataframe 
     # new_form_clnd = FUNC(new_form)
-
-
-    pred_class = clf.predict(new_form_clnd[0])
-    print('Predicted class:', pred_class)
-    
-    if pred_class == 1:
-        label_to_return = 'Russian Troll'
-    else:
-        label_to_return = 'Not a Russian Troll'
-    
-    return label_to_return                          
+    # pred_class = clf.predict(new_form_clnd[0])
+    # print('Predicted class:', pred_class)
+    # if pred_class == 1:
+    #     label_to_return = 'Russian Troll'
+    # else:
+    #     label_to_return = 'Not a Russian Troll'
+    # return label_to_return                          
