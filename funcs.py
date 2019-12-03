@@ -18,16 +18,16 @@ def make_prediction(text=str):
     clf = joblib.load('./clf.pkl')
     
     # convert form into dataframe
-    new_form = pd.Dataframe({'content': [text],
+    new_form = pd.DataFrame({'content': [text],
                          'target': None,
                          'author': None,
                          'publish-date': None})
 
     # clean form dataframe 
-    new_form_clnd = FUNC(new_form)
+    # new_form_clnd = FUNC(new_form)
 
 
-    pred_class = clf.predict(new_form_clnd[0]
+    pred_class = clf.predict(new_form_clnd[0])
     print('Predicted class:', pred_class)
     
     if pred_class == 1:

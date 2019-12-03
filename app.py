@@ -1,20 +1,17 @@
 import flask
 from flask import request, jsonify
-from funcs import *
+from funcs import make_prediction
 
 # initialize app 
 app = flask.Flask(__name__)
 
 @app.route("/", methods=['POST'])
 def print_piped():
-#     if request.form['mes']:
-#         msg = request.form['mes']
-#         print(msg)
-#         x_input, pred_class, pred_proba = make_prediction(str(msg))
-        flask.render_template('index.html',
-                               chat_in=x_input,
-                               prediction_class=pred_class,
-                               prediction_prob=pred_proba)
+    if request.form['mes']:
+        msg = request.form['mes']
+        print(msg)
+        x_input, pred_class, pred_proba = make_prediction(str(msg))
+        flask.render_template('index.html',chat_in=x_input,prediction_class=pred_class,prediction_prob=pred_proba)
     return jsonify(pred_class)
 
 @app.route('/', methods=['GET'])
