@@ -1,15 +1,16 @@
 import flask
 from flask import request, jsonify
+from funcs import *
 
 # initialize app 
 app = flask.Flask(__name__)
 
-@app.route("/", methods=["POST"])
+@app.route("/", methods=['POST'])
 def print_piped():
-    if request.form['mes']:
-        msg = request.form['mes']
-        print(msg)
-        x_input, pred_class, pred_proba = make_prediction(str(msg))
+#     if request.form['mes']:
+#         msg = request.form['mes']
+#         print(msg)
+#         x_input, pred_class, pred_proba = make_prediction(str(msg))
         flask.render_template('index.html',
                                chat_in=x_input,
                                prediction_class=pred_class,
@@ -36,5 +37,6 @@ def predict():
 
 # start the server, listen for requests 
 if __name__ == '__main__':
-    app.run(debug=True)  # local dev 
+#     app.run(debug=True)  # local dev
+    app.run(host='0.0.0.0')
     app.run()
