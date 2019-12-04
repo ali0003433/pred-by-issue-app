@@ -15,7 +15,7 @@ def process_form():
     res_immigration = request.form.get('immigration')
     res_terrorism = request.form.get('terrorism')
     res_gender = request.form.get('gender')
-    print('res_size:', res_size, 'res_racial:', res_racial, 'res_climate:', res_climate, 'res_terrorism:', res_terrorism, 'res_budget:', res_budget, 'res_immigration:', res_immigration, 'res_gender:', res_gender)
+    print('res_size:', res_size, 'res_racial:',res_racial, 'res_climate:', res_climate, 'res_terrorism:', res_terrorism, 'res_budget:', res_budget, 'res_immigration:', res_immigration, 'res_gender:', res_gender)
     prediction = make_prediction(res_size, res_racial, res_climate, res_budget, res_immigration, res_terrorism, res_gender)
     return flask.render_template('res.html')
   

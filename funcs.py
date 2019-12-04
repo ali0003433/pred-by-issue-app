@@ -227,8 +227,6 @@ def gdr_dummies(res_gender):
         return gdr1, gdr2, gdr3, gdr4
 
 def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigration, res_terrorism, res_gender):
-    print(res_size)
-    print(type(res_size))
     size1, size2, size3, size4 =  size_dummies(res_size)
     racial1, racial2, racial3, racial4 = racial_dummies(res_racial)
     clim1, clim2, clim3, clim4 = clm_dummies(res_climate)
@@ -269,9 +267,14 @@ def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigrati
     df = pd.DataFrame(data, index=[0])
     print('dataframe created')
     print(df)
-    print(len(df.columns))
-
-    # clf = joblib.load('./clf.pkl')
-    # pred = clf.predict(X)
-    # print(pred)
-    return 'res.html'
+    print('df length:', len(df.columns))
+    clf = joblib.load('./clf_2.pkl')
+    pred = clf.predict(df)
+    print(pred)
+    if pred == 1:
+        print('Clinton')
+    elif pred == 2:
+        print('Trump')
+    elif pred == 3:
+        print('Other behavior')
+    return 'pred printed'
