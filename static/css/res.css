@@ -1,64 +1,23 @@
 * { font-family: 'Open Sans', sans-serif;
-    background-color: grey;
-    color: white;
+    /* background-color: grey; */
+    color: black;
 }
 
-p {
-      font-size: 20px;
-}
-p {
-      margin-left: 100px;
-      margin-right: 100px;
+div.results {
+      font-size: 40px;
+      margin-left: 0px;
+      margin-right: 0px;
       margin-top: 10px;
       text-align: center;
 }
 
-p.candidate {
-      font-size: 30px;
-
+p.thanks {
+      font-size: 14px;
+      padding-top: 50px;
 }
-p.thank {
-      padding-bottom: 70px;
+.details{
       font-size: 16px;
 }
-label { padding-right: 6px;
-     font-size: 12px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-div.button {
-      padding-top: 20px;
-}
-button { 
-         font-size: 14px;
-         border-radius:30px; 
-         padding: 8px 20px;
-         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-         background-color: grey;
-         font-weight: 700;
-         border-width: 2px;
-         border-color: white;
-}
-
-button:hover {
-    background-color: white; 
-     
-}
-
-p.directions{
-      font-size: 20px;
-}
-
-p.issue{
-      padding-top: 15px;
-      font-weight: 700;
-      font-size: 14px;
-}
-
-
-
 
 .signature .much-heart{
 	display: inline-block;
@@ -97,9 +56,25 @@ p.issue{
 	text-decoration: none;
 	font-weight: bold;
 }
-p.footer{
+
+
+
+footer {
       font-size: 14px;
       bottom: 0;
-      padding-top: 450px;
-      color: black;
+      text-align: center;
+}
+
+
+body, html, footer{
+      height: 100%;
+}
+body {
+      background-image: url(../img/stickers.jpg);
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(255,255,255,0.8);
+      background-blend-mode: lighten;
 }
