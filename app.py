@@ -1,6 +1,6 @@
 import flask
 from flask import request, jsonify, render_template
-from funcs import make_prediction
+from scripts import make_prediction
 
 # initialize app 
 app = flask.Flask(__name__)
