@@ -11,7 +11,7 @@ form {
 }
 
 label { padding-right: 6px;
-     font-size: 12px;
+     font-size: 13px;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
@@ -46,7 +46,7 @@ p.directions{
 p.issue{
       padding-top: 20px;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 15px;
       color: white;
 }
 
