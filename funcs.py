@@ -269,12 +269,12 @@ def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigrati
     print(df)
     print('df length:', len(df.columns))
     clf = joblib.load('./clf_2.pkl')
-    pred = clf.predict(df)
-    print(pred)
-    if pred == 1:
+    prediction = clf.predict(df)
+    print(prediction)
+    if prediction == 1:
         print('Clinton')
-    elif pred == 2:
+    elif prediction == 2:
         print('Trump')
-    elif pred == 3:
+    elif prediction == 3:
         print('Other behavior')
-    return 'pred printed'
+    return prediction
