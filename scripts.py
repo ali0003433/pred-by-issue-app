@@ -277,7 +277,7 @@ def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigrati
         return prediction
     elif prediction == 2.0:
         print('Donald J. Trump')
-        prediction = 'Trump'
+        prediction = 'Donald J. Trump'
         return prediction
     elif prediction == 3.0:
         print('Other behavior')
