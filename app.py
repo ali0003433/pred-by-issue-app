@@ -28,5 +28,5 @@ def render_index():
 # start the server, listen for requests 
 if __name__ == '__main__':
     app.run(debug=True)  # local dev
-    app.run(host='0.0.0.0')
+    #app.run(host='0.0.0.0')
     app.run()

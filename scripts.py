@@ -273,15 +273,15 @@ def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigrati
     print(prediction)
     if prediction == 1.0:
         print('Clinton')
-        prediction = 'Clinton'
+        prediction = 'Hillary Clinton'
         return prediction
     elif prediction == 2.0:
-        print('Trump')
+        print('Donald J. Trump')
         prediction = 'Trump'
         return prediction
     elif prediction == 3.0:
         print('Other behavior')
-        prediction = 'Not Trump and Not Hilary'
+        prediction = 'Either a third party or you did not vote'
         return prediction
     else:
         return prediction
