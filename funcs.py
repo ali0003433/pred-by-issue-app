@@ -271,10 +271,17 @@ def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigrati
     clf = joblib.load('./clf_2.pkl')
     prediction = clf.predict(df)
     print(prediction)
-    if prediction == 1:
+    if prediction == 1.0:
         print('Clinton')
-    elif prediction == 2:
+        prediction = 'Clinton'
+        return prediction
+    elif prediction == 2.0:
         print('Trump')
-    elif prediction == 3:
+        prediction = 'Trump'
+        return prediction
+    elif prediction == 3.0:
         print('Other behavior')
-    return prediction
+        prediction = 'Not Trump and Not Hilary'
+        return prediction
+    else:
+        return prediction
