@@ -1,12 +1,13 @@
 * { font-family: 'Open Sans', sans-serif;
-    background-color: tomato;
+    background-color: grey;
+    text-align: justify;
 }
 
 form {
-      margin-left: 100px;
-      margin-right: 100px;
+      margin-left: 300px;
+      margin-right: 0px;
       margin-top: 10px;
-      text-align: center;
+      text-align: justify;
 }
 
 label { padding-right: 6px;
@@ -15,6 +16,7 @@ label { padding-right: 6px;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      color:black;
     }
 div.button {
       padding-top: 20px;
@@ -28,24 +30,25 @@ button {
          font-weight: 700;
          border-width: 2px;
          border-color: white;
+         margin-top: 100px;
 }
 
 button:hover {
-    background-color: white; 
+    background-color:white; 
      
 }
 
 p.directions{
       font-size: 20px;
+      color: white;
 }
 
 p.issue{
-      padding-top: 15px;
+      padding-top: 20px;
       font-weight: 700;
       font-size: 14px;
+      color: white;
 }
-
-
 
 
 .signature .much-heart{
@@ -85,10 +88,24 @@ p.issue{
 	text-decoration: none;
 	font-weight: bold;
 }
-footer{
-      text-align: center;
-}
+
+.column {
+      float: left;
+      width: 50%;
+    }
+    
+    /* Clear floats after the columns */
+.row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
 p.footer{
       font-size: 14px;
       bottom: 0;
+      padding-top: 15px;
+      text-align: center;
 }
+
