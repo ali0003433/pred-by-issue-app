@@ -157,3 +157,7 @@ legend {
       visibility: visible;
       opacity: 1;
     }
+
+    .fas{
+          padding-left: 5px;
+    }
