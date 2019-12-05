@@ -1,53 +1,67 @@
 * { font-family: 'Open Sans', sans-serif;
 }
+body, html, footer{
+      height: 100%;
+      margin: auto;
 
-form {
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 10px;
-      text-align: center;
+}
+body {background-image: url(../img/stickers.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(255,255,255,0.8);
+      background-blend-mode: lighten;
+      }
+p.directions{
+      font-size: 2.5vw;
+      }
+ .column {flex: 50%;
+      }
+legend {font-weight: 700;
+      font-size: 2vw;
 }
 
-label { padding-right: 6px;
-     font-size: 13px;
+label {font-size: 1.5vw;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      color:black;
     }
-div.button {
-      padding-top: 20px;
+.row{display: flex;
 }
-button { 
-         font-size: 14px;
-         border-radius:30px; 
-         padding: 8px 20px;
-         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-         background-color: lightgrey;
-         font-weight: 700;
-         border-width: 2px;
-         border-color:black ;
-         margin-top: 100px;
+.row:after {
+      content: "";
+      display: table;
+      clear: both;
 }
-
+div.last{
+      width: 50%;
+}
+div.button{ 
+         display: flex;
+         align-items: center;
+         justify-content: center;
+}
+button{
+      font-size: 2vw;
+      border-radius:30px; 
+      padding: 8px 20px;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      font-weight: 500;
+      border-width: 2px;
+      background: lightgrey;
+      border-color:black ;
+      margin: 30px;
+}
 button:hover {
-    background-color:white; 
-     
+    background-color:white;     
 }
-
-p.directions{
-      font-size: 20px;
-      color: black;
+div.signature {
+      display: flex;
+      font-size: 2vw;
+      align-items: center;
+      justify-content: center;
 }
-
-p.issue{
-      padding-top: 20px;
-      font-weight: 700;
-      font-size: 15px;
-      color: black;
-}
-
 .signature .much-heart{
 	display: inline-block;
 	position: relative;
@@ -84,36 +98,4 @@ p.issue{
 	color: #AAAAAA;
 	text-decoration: none;
 	font-weight: bold;
-}
-
-.column {
-      float: left;
-      width: 50%;
-    }
-    
-    /* Clear floats after the columns */
-.row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-
-footer{
-      font-size: 14px;
-      bottom: 0;
-      text-align: center;
-}
-
-body, html, footer{
-      height: 100%;
-}
-body {
-      background-image: url(../img/stickers.jpg);
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: rgba(255,255,255,0.8);
-      background-blend-mode: lighten;
 }

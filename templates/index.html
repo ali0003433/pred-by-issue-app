@@ -1,98 +1,127 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset='utf-8' name='viewport' media='screen' content='width=device-width, initial-scale=1'> 
         <title>Issue Survey</title>
         <link rel='stylesheet' type='text/css' href='../static/css/main.css'>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap'>
+
     </head>
     <body>
-        <div id= 'form-container'>
-            <form name= 'survey' method='POST' action='/' class = 'form' id = 'issue-form'>
-                <p class = 'directions'>How <i>important</i> are the following <b>issues</b> to you?</p>
+        <form name= 'survey' method='POST' action='/'>
+            <p class = 'directions'>How <i>important</i> are the following <b>issues</b> to you?</p>
             <div class = 'row'>
-                <div class = 'column'>
-                    <p class = 'issue'>The Size of Government</p>
-                    <input type = 'radio' name = 'size' value = '1' id = 'size1'>
-                    <label for = 'size1'>Very</label><br>
-                    <input type = 'radio' name = 'size' value = '2' id = 'size2'>
-                    <label for = 'size2'>Somewhat</label><br>
-                    <input type = 'radio' name = 'size' value = '3' id = 'size3'>
-                    <label for = 'size3'>Not Very</label><br>
-                    <input type = 'radio' name = 'size' value = '4' id = 'size4'>
-                    <label for = 'size4'>Unimportant</label><br>
-                    <p class = 'issue'>Racial Equality</p>
-                    <input type = 'radio' name = 'racial' value= '1' id = 'racial1'>
-                    <label for = 'racial1'>Very</label><br>
-                    <input type = 'radio' name = 'racial' value = '2' id = 'racial2'>
-                    <label for = 'racial2'>Somewhat</label><br>
-                    <input type = 'radio' name = 'racial' value = '3' id = 'racial3'>
-                    <label for = 'racial3'>Not Very</label><br>
-                    <input type = 'radio' name = 'racial' value = '4' id = 'racial4'>
-                    <label for = 'racial4'>Unimportant</label><br>
-                    <p class = 'issue'>Climate Change</p>
-                    <input type = 'radio' name = 'climate' value= '1' id = 'climate1'>
-                    <label for = 'climate1'>Very</label><br>
-                    <input type = 'radio' name = 'climate' value= '2' id = 'climate2'>
-                    <label for = 'climate2'>Somewhat</label><br>
-                    <input type = 'radio' name = 'climate' value = '3' id = 'climate3'>
-                    <label for = 'climate3'>Not Very</label><br>
-                    <input type = 'radio' name = 'climate' value = '4' id = 'climate4'>
-                    <label for = 'climate4'>Unimportant</label><br>
-                    <p class = 'issue'>The Budget Deficit</p>
-                    <input type = 'radio' name = 'budget' value= '1' id = 'budget1'>
-                    <label for = 'budget1'>Very</label><br>
-                    <input type = 'radio' name = 'budget' value= '2' id = 'budget2'>
-                    <label for = 'budget2'>Somewhat</label><br>
-                    <input type = 'radio' name = 'budget' value = '3' id = 'budget3'>
-                    <label for = 'budget3'>Not Very</label><br>
-                    <input type = 'radio' name = 'budget' value = '4' id = 'budget4'>
-                    <label for = 'budget4'>Unimportant</label><br>
-                </div>
-                <div class = 'column'>
-                    <p class = 'issue'>Immigration</p>
-                    <input type = 'radio' name = 'immigration' value= '1' id = 'immigration1'>
-                    <label for = 'immigration1'>Very</label><br>
-                    <input type = 'radio' name = 'immigration' value= '2' id = 'immigration2'>
-                    <label for = 'immigration2'>Somewhat</label><br>
-                    <input type = 'radio' name = 'immigration' value = '3' id = 'immigration3'>
-                    <label for = 'immigration3'>Not Very</label><br>
-                    <input type = 'radio' name = 'immigration' value = '4' id = 'immigration4'>
-                    <label for = 'immigration4'>Unimportant</label><br>
-                    <p class = 'issue'>Terrorism</p>
-                    <input type = 'radio' name = 'terrorism' value= '1' id = 'terrorism1' >
-                    <label for = 'terrorism1'>Very</label><br>
-                    <input type = 'radio' name = 'terrorism' value= '2' id = 'terrorism2'>
-                    <label for = 'terrorism2'>Somewhat</label><br>
-                    <input type = 'radio' name = 'terrorism' value = '3' id = 'terrorism3'>
-                    <label for = 'terrorism3'>Not Very</label><br>
-                    <input type = 'radio' name = 'terrorism' value = '4' id = 'terrorism4'>
-                    <label for = 'terrorism4'>Unimportant</label><br>
-                    <p class = 'issue'>Gender Equality</p>
-                    <input type = 'radio' name = 'gender' value= '1' id = 'gender1' >
-                    <label for = 'gender1'>Very</label><br>
-                    <input type = 'radio' name = 'gender' value= '2' id = 'gender2'>
-                    <label for = 'gender2'>Somewhat</label><br>
-                    <input type = 'radio' name = 'gender' value = '3' id = 'gender3'>
-                    <label for = 'gender3'>Not Very</label><br>
-                    <input type = 'radio' name = 'gender' value = '4' id = 'gender4'>
-                    <label for = 'gender4'>Unimportant</label><br>
-                </div>
-                <div class = 'button'>
-                    <button type= 'submit' value='Submit' method='POST'>Submit</button>
-                </div>
+            <div class = 'column'>
+                <fieldset>
+                    <legend>The Size of Government</legend>
+                    <div>
+                        <input type = 'radio' name = 'size' value = '1' id = 'size1'>
+                        <label for = 'size1'>Very</label><br>
+                        <input type = 'radio' name = 'size' value = '2' id = 'size2'>
+                        <label for = 'size2'>Somewhat</label><br>
+                        <input type = 'radio' name = 'size' value = '3' id = 'size3'>
+                        <label for = 'size3'>Not Very</label><br>
+                        <input type = 'radio' name = 'size' value = '4' id = 'size4'>
+                        <label for = 'size4'>Unimportant</label><br>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Racial Equality</legend>
+                    <div>
+                        <input type = 'radio' name = 'racial' value= '1' id = 'racial1'>
+                        <label for = 'racial1'>Very</label><br>
+                        <input type = 'radio' name = 'racial' value = '2' id = 'racial2'>
+                        <label for = 'racial2'>Somewhat</label><br>
+                        <input type = 'radio' name = 'racial' value = '3' id = 'racial3'>
+                        <label for = 'racial3'>Not Very</label><br>
+                        <input type = 'radio' name = 'racial' value = '4' id = 'racial4'>
+                        <label for = 'racial4'>Unimportant</label><br>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Climate Change</legend>
+                    <div>
+                        <input type = 'radio' name = 'climate' value= '1' id = 'climate1'>
+                        <label for = 'climate1'>Very</label><br>
+                        <input type = 'radio' name = 'climate' value= '2' id = 'climate2'>
+                        <label for = 'climate2'>Somewhat</label><br>
+                        <input type = 'radio' name = 'climate' value = '3' id = 'climate3'>
+                        <label for = 'climate3'>Not Very</label><br>
+                        <input type = 'radio' name = 'climate' value = '4' id = 'climate4'>
+                        <label for = 'climate4'>Unimportant</label><br>
+                    </div>
+                </fieldset>
             </div>
-            </form>
+            <div class = 'column'>
+                <fieldset>
+                    <legend>Immigration</legend>
+                    <div>
+                        <input type = 'radio' name = 'immigration' value= '1' id = 'immigration1'>
+                        <label for = 'immigration1'>Very</label><br>
+                        <input type = 'radio' name = 'immigration' value= '2' id = 'immigration2'>
+                        <label for = 'immigration2'>Somewhat</label><br>
+                        <input type = 'radio' name = 'immigration' value = '3' id = 'immigration3'>
+                        <label for = 'immigration3'>Not Very</label><br>
+                        <input type = 'radio' name = 'immigration' value = '4' id = 'immigration4'>
+                        <label for = 'immigration4'>Unimportant</label><br>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Terrorism</legend>
+                    <div>
+                        <input type = 'radio' name = 'terrorism' value= '1' id = 'terrorism1' >
+                        <label for = 'terrorism1'>Very</label><br>
+                        <input type = 'radio' name = 'terrorism' value= '2' id = 'terrorism2'>
+                        <label for = 'terrorism2'>Somewhat</label><br>
+                        <input type = 'radio' name = 'terrorism' value = '3' id = 'terrorism3'>
+                        <label for = 'terrorism3'>Not Very</label><br>
+                        <input type = 'radio' name = 'terrorism' value = '4' id = 'terrorism4'>
+                        <label for = 'terrorism4'>Unimportant</label><br>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Gender Equality</legend>
+                    <div>
+                        <input type = 'radio' name = 'gender' value= '1' id = 'gender1' >
+                        <label for = 'gender1'>Very</label><br>
+                        <input type = 'radio' name = 'gender' value= '2' id = 'gender2'>
+                        <label for = 'gender2'>Somewhat</label><br>
+                        <input type = 'radio' name = 'gender' value = '3' id = 'gender3'>
+                        <label for = 'gender3'>Not Very</label><br>
+                        <input type = 'radio' name = 'gender' value = '4' id = 'gender4'>
+                        <label for = 'gender4'>Unimportant</label><br>
+                    </div>
+                </fieldset>
+            </div>
         </div>
-        <br>
+        <div>
+            <div class='last'>
+            <fieldset>
+                    <legend>The Budget Deficit</legend>
+                    <div>
+                        <input type = 'radio' name = 'budget' value= '1' id = 'budget1'>
+                        <label for = 'budget1'>Very</label><br>
+                        <input type = 'radio' name = 'budget' value= '2' id = 'budget2'>
+                        <label for = 'budget2'>Somewhat</label><br>
+                        <input type = 'radio' name = 'budget' value = '3' id = 'budget3'>
+                        <label for = 'budget3'>Not Very</label><br>
+                        <input type = 'radio' name = 'budget' value = '4' id = 'budget4'>
+                        <label for = 'budget4'>Unimportant</label><br>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        </form>
+        <div class='button'>
+            <button type= 'submit' value='Submit' method='POST'>Submit</button>
+         </div>
         <footer>
-            <!-- footer -->
-            <div class="signature">
-                <p class = 'footer'>Made with <i class="much-heart"></i> by Alyssa Liguori </p>
-                <p class = 'footer'> Photo by Element5 Digital on Unsplash</p>
+            <div class='signature'>
+                <p class = 'footer'>____Made with <i class='much-heart'></i> by Alyssa Liguori____
+                <br>Photo by Element5 Digital on Unsplash</p>
             </div>
 
         </footer>
     </body>
+    <script src='main.js'></script> 
 </html>
