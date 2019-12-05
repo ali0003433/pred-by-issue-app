@@ -12,8 +12,8 @@ body, html, footer{
 body {background-image: url(../img/stickers.jpg);
       height: 100%;
       background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-repeat: repeat-y;
+      background-size: 100%;
       background-color: rgba(255,255,255,0.8);
       background-blend-mode: lighten;
       }
@@ -44,6 +44,12 @@ label {font-size: 1.2vw;
 }
 div.last{
       width: 50%;
+}
+
+form{
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 4%;
 }
 div.button{ 
          display: flex;
@@ -110,4 +116,9 @@ div.signature {
 	color: #AAAAAA;
 	text-decoration: none;
 	font-weight: bold;
+}
+
+icon {
+      color: black;
+      font-size: 1.2vw;
 }

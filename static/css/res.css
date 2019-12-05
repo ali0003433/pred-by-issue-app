@@ -10,12 +10,15 @@ body {
       background-image: url(../img/stickers.jpg);
       height: 100%;
       background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-repeat: repeat-y;
+      background-size: 100%;
       background-color: rgba(255,255,255,0.8);
       background-blend-mode: lighten;
 }
 * { font-family: 'Open Sans', sans-serif;
+}
+form{
+      padding: 5%;
 }
 div.results {
       padding-top: 5%;
@@ -83,4 +86,8 @@ div.signature {
 	color: #AAAAAA;
 	text-decoration: none;
 	font-weight: bold;
+}
+i {
+      color: black;
+      font-size: 1.2vw;
 }
