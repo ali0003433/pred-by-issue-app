@@ -33,14 +33,20 @@ p.thanks {
 .details{
       font-size: 2vw;
 }
-footer {
-      bottom: 0;
-      text-align: center;
+p.footer{
+      font-display: 1vw;
+}
+
+p.footer{
+      font-size:1vw;
+      padding-top: 5%;
+}
+div.signature {
       display: flex;
       font-size: 1.5vw;
       align-items: center;
       justify-content: center;
-      }
+}
 .signature .much-heart{
 	display: inline-block;
 	position: relative;
