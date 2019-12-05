@@ -1,3 +1,7 @@
+@viewport {
+      width: device-width ;
+      zoom: 1.0 ;
+    }
 * { font-family: 'Open Sans', sans-serif;
 }
 body, html, footer{
@@ -12,8 +16,11 @@ body {background-image: url(../img/stickers.jpg);
       background-color: rgba(255,255,255,0.8);
       background-blend-mode: lighten;
       }
-p.directions{
+h5.directions{
       font-size: 2.5vw;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
       }
  .column {flex: 50%;
       }
