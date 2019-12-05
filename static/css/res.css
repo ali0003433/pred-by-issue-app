@@ -1,23 +1,46 @@
-* { font-family: 'Open Sans', sans-serif;
-    /* background-color: grey; */
-    color: black;
+@viewport {
+      width: device-width ;
+      zoom: 1.0 ;
+    }
+body, html, footer{
+      height: 100%;
+      margin: auto;
 }
-
+body {
+      background-image: url(../img/stickers.jpg);
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(255,255,255,0.8);
+      background-blend-mode: lighten;
+}
+* { font-family: 'Open Sans', sans-serif;
+}
 div.results {
-      font-size: 40px;
+      padding-top: 5%;
+      font-size: 2vw;
       margin-left: 0px;
       margin-right: 0px;
-      margin-top: 10px;
+      margin-top: 1%;
       text-align: center;
 }
 
 p.thanks {
-      font-size: 14px;
-      padding-top: 50px;
+      font-size: 2vw;
 }
 .details{
-      font-size: 16px;
+      font-size: 2vw;
 }
+footer {
+      bottom: 0;
+      text-align: center;
+      display: flex;
+      font-size: 1.5vw;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2%;
+      }
 
 .signature .much-heart{
 	display: inline-block;
@@ -55,27 +78,4 @@ p.thanks {
 	color: #AAAAAA;
 	text-decoration: none;
 	font-weight: bold;
-}
-
-
-
-footer {
-      font-size: 14px;
-      bottom: 0;
-      text-align: center;
-      padding-top: 330px;
-}
-
-
-body, html, footer{
-      height: 100%;
-}
-body {
-      background-image: url(../img/stickers.jpg);
-      height: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: rgba(255,255,255,0.8);
-      background-blend-mode: lighten;
 }
