@@ -9,12 +9,16 @@ import random
 from sklearn.linear_model import LogisticRegression
 
 def dummies(res):
+    '''Convert categories into dummy variables. 
+    '''
     result = [0,0,0,0]
     if int(res) > 1:
         result[int(res)-2] = 1
     return result
 
 def make_prediction(res_size, res_racial, res_climate, res_budget, res_immigration, res_terrorism, res_gender):
+    '''Pass user's data to the dataframe to run through model and generate a prediction
+    '''
     size1, size2, size3, size4 =  dummies(res_size)
     racial1, racial2, racial3, racial4 = dummies(res_racial)
     clim1, clim2, clim3, clim4 = dummies(res_climate)
